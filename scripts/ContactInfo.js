@@ -1,7 +1,10 @@
-module.exports = ContactInfo;
-function ContactInfo(name) {
-    this.name = name;
-    this.lastName = "";
-    this.email = "";
-    this.phoneNumber = "";
+class ContactInfo {
+    constructor() {
+        this.firstName = "";
+        this.lastName = "";
+        this.email = "";
+        this.phoneNumber = "";
+    }
 }
+
+module.exports = ContactInfo;

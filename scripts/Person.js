@@ -1,16 +1,19 @@
 var BallLayout = require('./BallLayout');
-var ContactIno = require('./ContactInfo');
+var ContactInfo = require('./ContactInfo');
 
 const Handedness = {
     LEFT: "letf",
     RIGHT: "right"
 };
 
-module.exports = Person;
-function Person(name) {
-    this.id = -1;
-    this.notes = "Test Notes";
-    this.contactInfo = new ContactIno(name);
-    this.ballLayouts = [new BallLayout()];
-    this.handedness = Handedness.RIGHT;
+class Person {
+    constructor() {
+        this.id = -1;
+        this.notes = "Test";
+        this.contactInfo = new ContactInfo();
+        this.ballLayouts = [new BallLayout()];
+        this.handedness = Handedness.RIGHT;
+    }
 }
+
+module.exports = Person;
